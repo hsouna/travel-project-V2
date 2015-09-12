@@ -1,0 +1,153 @@
+body{
+  margin: 0px 20px ;
+  background-color: #F9F9F9;
+}
+ul{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: auto;
+  margin-bottom: inherit;
+}
+.header{
+  padding-bottom: 10px;
+  padding-top: 10px;
+  margin-top: 0px;
+
+}
+ul li{
+  list-style: none;
+  margin: 10px 40px;
+}
+.header li{
+  list-style: none;
+}
+ li img{
+  display: none;
+}
+ul li a{
+  color: #999;
+  text-decoration: none;
+  font-size: 1.6em;
+  transition: color 1s;
+}
+ul li a:hover{
+  color: #666;
+}
+.hero{
+  height: 500px;
+  background-image: url(../img/home-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+.hero h1{
+ color: white;
+ font-size: 3.5em;
+ margin-top: auto;
+ position: relative;
+ top: 100px;
+ padding: 0px 200px;
+ animation-name: mymove;
+ animation-duration: 2s;
+}
+@keyframes mymove{
+  from{
+    top: 200px;
+  }
+  to{
+    top: 100px;
+  }
+
+}
+.hero img{
+  width: 50px;
+  height: 50px;
+  position: relative;
+  top: 30%;
+  transition: all 1s cubic-bezier(0.18, 0.89, 0.64, 1.68);
+}
+.hero img:hover
+{
+transform: rotate(1turn);
+}
+.urban{
+  height: 700px;
+  background-image: url(../img/urban_sunrise.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+}
+.urban p{
+  transform: rotate(45deg);
+  text-align: center;
+  color: whitesmoke;
+  font-size: 2.9em;
+  position: relative;
+  top: 200px;
+  border: 2px solid black;
+  width: 250px;
+  height: 250px;
+  margin: 0 auto;
+}
+
+@media (max-width:860px) {
+   .hero h1{
+     padding-left: 10px;
+     padding-right: 10px;
+     padding-top: 50px;
+     font-size: 2.2em;
+   }
+}
+
+@media (max-width:740px) {
+  ul{
+    padding-left: 0px;
+  }
+  ul li{
+    margin: 10px 10px;
+  }
+}
+
+@media (max-width:460px) {
+   ul li{
+   margin: 5px auto;
+  }
+
+  ul{
+    width: auto;
+    background-color: #F9F9F9;
+    flex-direction: column;
+    transition: all 1s ease-in-out;
+    transform: translateY(-150%);
+    overflow-y: auto;
+  }
+  .open-nav{
+    display: flex;
+    transform: translateY(0%);
+    transition: all 1s ease-in-out;
+    text-align: center;
+  }
+  .header img{
+    display: flex;
+    transition: all 0.1s ease-in-out ;
+  }
+  .header img:active {
+    transform: rotate(360deg);
+  }
+  .header li {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .header{
+    height: 40px;
+  }
+  .hero h1{
+    font-size: 1.5em;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 50px;
+  }
+
+
+}
